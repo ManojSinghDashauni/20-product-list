@@ -1,0 +1,92 @@
+
+// COLOR VARIABLES
+
+$color-Red:hsl(14, 86%, 42%);
+$color-Green: hsl(159, 69%, 38%);
+
+$color-Rose-50: hsl(20, 50%, 98%);
+$color-Rose-100: hsl(13, 31%, 94%);
+$color-Rose-300: hsl(14, 25%, 72%);
+$color-Rose-400: hsl(7, 20%, 60%);
+$color-Rose-500: hsl(12, 20%, 44%);
+$color-Rose-900: hsl(14, 65%, 9%);
+
+
+
+$bp-tb: 48em;     // 768px
+$bp-mobile: 24.4375em;    // 375px
+
+
+
+
+
+
+@import "./typography";
+@import "./card.scss";
+@import "./cart.scss";
+@import "./btn.scss";
+@import "./product.scss";
+@import "./confirm.scss";
+
+
+html{
+    font-size: 62.25%;
+    @media only screen and (max-width: $bp-mobile) {
+
+    }
+
+}
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body{
+    background-color: $color-Rose-50;
+
+    @media only screen and (max-width: $bp-mobile) {
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media only screen and (max-width: $bp-mobile) {
+        display: block;
+
+    }
+}
+
+.container{
+    display: flex;
+    padding:5rem 4rem;
+    justify-content: center;
+    @media only screen and (max-width: $bp-mobile) {
+       flex-direction: column;
+       padding: 0;
+
+    }
+    &__left{
+        flex:0 0 70%;
+        @media only screen and (max-width: $bp-mobile) {
+            flex:1;
+
+        }
+    }
+    &__right{
+        flex: 0 0 30%;
+        @media only screen and (max-width: $bp-mobile) {
+            flex:1;
+
+        }
+    }
+}

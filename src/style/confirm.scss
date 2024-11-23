@@ -1,0 +1,43 @@
+.confirm{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 4rem;
+    z-index: 111;
+    position:fixed;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__item{
+        background-color: $color-Rose-50;
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: .2rem solid $color-Rose-100;
+        }
+    &__text{
+        gap: 1rem;
+        display: flex;
+        // flex-direction: column;
+        align-items: center;
+    }
+    &__img{
+        width: 5rem;
+        height: 5rem;
+    }
+    &__outer{
+        display: flex;
+        flex-direction: column;
+    }
+    &__inner{
+        display: flex;
+        gap: 1rem;
+    }
+    &__order{
+        background-color: $color-Rose-50;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+}

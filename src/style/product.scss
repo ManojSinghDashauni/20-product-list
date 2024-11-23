@@ -1,0 +1,52 @@
+.product{
+    &__item{
+        display: flex;
+        flex-direction: column;
+        padding-block: 2rem;
+        border-bottom: .2rem solid $color-Rose-100;
+    }
+    &__text{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__inner{
+        display: flex;
+        gap:1rem;
+    }
+    &__btn{
+        border: .2rem solid $color-Rose-500;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+    }
+    &__svg{
+        fill:$color-Rose-500
+    }
+    &__order{
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-block: 2rem;
+    }
+    &__tree{
+        background-color: $color-Rose-50;
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        gap: 1rem;
+    }
+    &__button{
+        color: white;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        background-color:hsla(14, 86%, 42%,.8);;
+        border: none;
+        padding-block: 1.6rem;
+        width: 100%;
+        border-radius: 5rem;
+        &:hover{
+            background-color: $color-Red;
+        }
+    }
+}

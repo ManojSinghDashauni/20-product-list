@@ -1,0 +1,32 @@
+.card{
+        width: 25rem;
+        height: auto;
+        background-color: $color-Rose-50;
+        margin: 2rem;
+        font-family: 'RedHatRegular';
+        @media only screen and (max-width: $bp-mobile) {
+           width: 90%;
+
+        }
+    &__img--box{
+        // width: 25rem;
+        height: auto;
+        border-radius: 4rem;
+        }
+    &__img{
+        object-fit: cover;
+        border-radius: 2rem;
+        width: 100%;
+        height: 100%;
+        display: block;
+        &:hover{
+            border: .3rem solid $color-Red;
+        }
+    }
+    &__btn--box{
+        display: flex;
+        justify-content: center;
+        transform: translateY(-2rem);
+    }
+    &__text{}
+}
