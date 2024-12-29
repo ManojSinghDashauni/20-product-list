@@ -1,11 +1,12 @@
 import React from "react";
-import data from "../assets/data.json";
+import data from "../data/data.json"
 import Button from "./Button";
 
 export const Card = () => {
   return (
     <div className="cards">
       {data.map((item) => {
+        console.log(data[0].desktop)
         return (
           <div className="card" key={item.id}>
             <div className="card__img--box">
