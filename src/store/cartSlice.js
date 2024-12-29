@@ -1,4 +1,4 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cart: [],
@@ -16,20 +16,18 @@ export const cartSlice = createSlice({
       } else {
         const temp = { ...action.payload, quantity: 1 };
         state.cart.push(temp);
-        console.log(action.payload);
       }
-      // const todo = {
-      //   id: nanoid(),
-      //   text: action.payload,
-      // };
     },
 
     removeItem: (state, action) => {
       state.cart = state.cart.filter((item) => item.id !== action.payload.id);
     },
+    clearCart: (state) => {
+      state.cart = []; 
+    },
   },
 });
 
-export const { addItem, removeItem } = cartSlice.actions;
+export const { addItem, removeItem,clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

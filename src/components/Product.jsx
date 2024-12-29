@@ -7,7 +7,7 @@ const Product = () => {
   const [show, setShow] = useState(false);
 
   const toggle = () => {
-    setShow(!show);
+    setShow(true);
   };
 
   const { cart } = useSelector((state) => state.name);
@@ -76,7 +76,7 @@ const Product = () => {
       <button className="product__button" onClick={() => toggle()}>
         Confirm Order
       </button>
-      {show ? <Confirm /> : ""}
+      {show ? <Confirm setShow={setShow} /> : ""}
     </div>
   );
 };

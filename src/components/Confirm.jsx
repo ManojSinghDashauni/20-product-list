@@ -1,9 +1,19 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useCallback, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCart } from "../store/cartSlice";
 
-const Confirm = () => {
-  const [show, setShow] = useState(false);
+
+const Confirm = ({setShow}) => {
   const { cart } = useSelector((state) => state.name);
+  const dispatch = useDispatch();
+
+  const handleConfirm = useCallback(() => {
+    setShow(false);
+    dispatch(clearCart());
+  }, [dispatch]);
+
+  useEffect(() => {
+  }, [handleConfirm]);
   return (
     <div className="confirm">
       <svg
@@ -53,7 +63,7 @@ const Confirm = () => {
         <h4 className="heading--4">Order Total </h4>
         <h3 className="heading--3-font">20</h3>
       </div>
-      <button className="product__button" onClick={() => setShow(!show)}>
+      <button className="product__button" onClick={handleConfirm}>
         Start New Order
       </button>
     </div>

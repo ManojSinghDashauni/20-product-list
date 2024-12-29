@@ -1,5 +1,6 @@
 
-[
+
+export const dataList = [
   {
     "id": "1",
     "thumbnail": "../../src/assets/images/image-waffle-thumbnail.jpg",
